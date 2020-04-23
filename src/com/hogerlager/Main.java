@@ -9,6 +9,7 @@ public class Main {
     private static Speelkaart huidigeKaart;
     private static Speelkaart nieuweKaart;
     private static BoekKaarten boek;
+    private static final int aantalWinsToWin = 7;
 
     public static void main(String[] args) {
         scan = new Scanner(System.in);
@@ -29,7 +30,7 @@ public class Main {
             nieuweKaart = boek.getNieuweKaart();
 
             vraagAntwoord(huidigeKaart);
-
+            if(verloren) break;
             ++winstreak;
             huidigeKaart = nieuweKaart;
 
@@ -48,9 +49,13 @@ public class Main {
             if(isLager(antwoord) || isHoger(antwoord)) {
                 juist();
             } else if(antwoordIsLager(antwoord) || antwoordIsHoger(antwoord)) {
-                System.out.println(huidigeKaart.getSoortString() + "\t" + huidigeKaart.getWaardeString());
-                fout();
-                verloren = true;
+                //gelijk
+                if(huidigeKaart.getWaardeIndex() == nieuweKaart.getWaardeIndex())
+                    juist();
+                else {
+                    fout();
+                    verloren = true;
+                }
             } else {
                 waardeJuist = false;
                 System.out.println("Gelieve een juiste waarde in te geven.");
@@ -75,22 +80,25 @@ public class Main {
     }
 
     public static void gameOver() {
-        System.out.println("Game Over");
+        System.out.println("---------Game Over---------");
     }
 
     public static void juist() {
-        System.out.println("JUIST!");
+        System.out.println("\nJUIST!");
     }
 
     public static void fout() {
-        System.out.println("FOUT!");
+        System.out.println("\nFOUT!");
+        System.out.println("Uw huidige kaart:");
+        System.out.println("\t" + huidigeKaart.getSoortString() + " " + huidigeKaart.getWaardeString());
+        System.out.println("Uw nieuwe kaart:");
+        System.out.println("\t" + nieuweKaart.getSoortString() + " " + nieuweKaart.getWaardeString());
     }
 
     public static boolean isGewonnen() {
-        int aantalWins = 7;
-        if(winstreak == aantalWins) {
+        if(winstreak == aantalWinsToWin) {
             System.out.println("Goedzo, je hebt gewonnen");
-            System.out.println("Doe zo verder, je hebt een winstreak van intotaal " + winstreak);
+            System.out.println("Doe zo verder, je hebt een winstreak van in totaal " + winstreak);
             return true;
         }
         return false;
