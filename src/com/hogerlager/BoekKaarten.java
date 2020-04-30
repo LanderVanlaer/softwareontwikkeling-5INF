@@ -6,8 +6,8 @@ public class BoekKaarten {
     private ArrayList<Speelkaart> boek = new ArrayList<>();
 
     public BoekKaarten() {
-        for (int a = 1; a <= 13; a++) {
-            for (int i = 1; i <= 4; i++) {
+        for(int a = 1; a <= 13; a++) {
+            for(int i = 1; i <= 4; i++) {
                 boek.add(new Speelkaart(a, i));
             }
         }
@@ -28,7 +28,7 @@ public class BoekKaarten {
     }
 
     public void removeKaart(Speelkaart kaart) {
-        if (this.contains(kaart)) {
+        if(this.contains(kaart)) {
             this.boek.remove(kaart);
         }
     }
@@ -40,9 +40,9 @@ public class BoekKaarten {
     }
 
     public void schud() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < boek.size() - 1; j++) {
-                if (Math.random() > .5) {
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < boek.size() - 1; j++) {
+                if(Math.random() > .5) {
                     Speelkaart temp = boek.get(j);
                     boek.set(i, boek.get(i + 1));
                     boek.set(i + 1, temp);
