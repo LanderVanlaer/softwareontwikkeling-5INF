@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 public class Unit {
     private double levensbar;

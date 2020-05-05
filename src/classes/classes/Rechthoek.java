@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class Rechthoek {
     private double hoogte;

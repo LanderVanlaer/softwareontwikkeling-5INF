@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 import java.util.ArrayList;
 

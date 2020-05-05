@@ -1,4 +1,4 @@
-package com.pokemon;
+package classes.pokemon;
 
 import java.io.File;
 import java.io.FileNotFoundException;

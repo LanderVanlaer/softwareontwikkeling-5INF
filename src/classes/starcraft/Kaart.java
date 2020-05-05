@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 public class Kaart {
     private int lengte;

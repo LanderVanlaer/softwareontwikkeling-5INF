@@ -1,4 +1,4 @@
-package com.hogerlager;
+package classes.hogerlager;
 
 public class Speelkaart {
     private static final String[] waardenNaam = {"aas", "twee", "drie", "vier", "vijf", "zes", "zeven", "acht", "negen", "tien", "boer", "dame", "heer"};

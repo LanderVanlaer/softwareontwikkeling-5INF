@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class Resultaat {
     private static final String[] graden = new String[]{"Niet geslaagd", "Voldoende", "Onderscheiding", "Grote onderscheiding", "Grootste onderscheiding"};

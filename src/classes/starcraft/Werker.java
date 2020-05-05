@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 public class Werker {
     private String naam;

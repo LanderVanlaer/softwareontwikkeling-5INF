@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class Array2D {
     private boolean[][] grid;
@@ -13,9 +13,9 @@ public class Array2D {
 
     public int getAantal() {
         int size = 0;
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
-                if (grid[i][j]) ++size;
+        for(int i = 0; i < grid.length; i++) {
+            for(int j = 0; j < grid[i].length; j++) {
+                if(grid[i][j]) ++size;
             }
         }
         return size;
@@ -23,16 +23,16 @@ public class Array2D {
 
     public int getAantalVanKolom(int kolom) {
         int size = 0;
-        for (int i = 0; i < grid[kolom].length; i++) {
-            if (grid[kolom][i]) ++size;
+        for(int i = 0; i < grid[kolom].length; i++) {
+            if(grid[kolom][i]) ++size;
         }
         return size;
     }
 
     public int getAantalVanRrij(int rij) {
         int size = 0;
-        for (int i = 0; i < grid.length; i++) {
-            if (grid[i][rij]) ++size;
+        for(int i = 0; i < grid.length; i++) {
+            if(grid[i][rij]) ++size;
         }
         return size;
     }
@@ -44,7 +44,7 @@ public class Array2D {
     }
 
     public void verwisselRijen(int rij1, int rij2) {
-        for (int i = 0; i < this.grid.length; i++) {
+        for(int i = 0; i < this.grid.length; i++) {
             boolean temp = this.grid[i][rij2];
             this.grid[i][rij2] = this.grid[i][rij1];
             this.grid[i][rij1] = temp;
@@ -52,9 +52,9 @@ public class Array2D {
     }
 
     public boolean[] getDiagonaal() {
-        if (this.grid.length != this.grid[0].length) return new boolean[0];
+        if(this.grid.length != this.grid[0].length) return new boolean[0];
         boolean[] lijn = new boolean[this.grid.length];
-        for (int i = 0; i < lijn.length; i++) {
+        for(int i = 0; i < lijn.length; i++) {
             lijn[i] = this.grid[i][i];
         }
         return lijn;
@@ -62,13 +62,13 @@ public class Array2D {
 
     public int getAantalWaardenRond(int x, int y) {
         int aantalWaarden = 0;
-        for (int i = -1; i <= 1; i++) {
-            for (int j = -1; j <= 1; j++) {
+        for(int i = -1; i <= 1; i++) {
+            for(int j = -1; j <= 1; j++) {
                 int newX = x + i;
                 int newY = y + j;
-                if ((newX >= 0 && newX < this.grid.length) &&
+                if((newX >= 0 && newX < this.grid.length) &&
                         (newY >= 0 && newY < this.grid[0].length)) {
-                    if (grid[newX][newY] && newX != 0 && newY != 0) ++aantalWaarden;
+                    if(grid[newX][newY] && newX != 0 && newY != 0) ++aantalWaarden;
                 }
             }
         }
@@ -80,7 +80,7 @@ public class Array2D {
     }
 
     public boolean getValueOf(int x, int y) {
-        if (!(x >= 0 && x < this.grid.length) ||
+        if(!(x >= 0 && x < this.grid.length) ||
                 !(y >= 0 && y < this.grid[0].length)) {
             throw new Error("Cannot get x (" + x + ") and y (" + y + ") of grid.\ngrid:\n\tWidth " + this.grid.length + "\n\tHeight " + this.grid[0].length);
         }
@@ -97,8 +97,8 @@ public class Array2D {
     }
 
     public void randomize() {
-        for (int i = 0; i < this.grid.length; i++) {
-            for (int j = 0; j < this.grid[0].length; j++) {
+        for(int i = 0; i < this.grid.length; i++) {
+            for(int j = 0; j < this.grid[0].length; j++) {
                 this.setValueOf(i, j, Math.floor(Math.random() * 2) == 0);
             }
         }

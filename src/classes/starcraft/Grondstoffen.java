@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 public class Grondstoffen {
     public static final String[] namen = new String[]{"Gas", "Minerals"};

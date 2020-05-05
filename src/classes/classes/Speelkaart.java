@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class Speelkaart {
     private static String[] waardenNaam = {"aas", "twee", "drie", "vier", "vijf", "zes", "zeven", "acht", "negen", "tien", "boer", "dame", "heer"};

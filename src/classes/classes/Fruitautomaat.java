@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class Fruitautomaat {
     private int aantalAppels;
@@ -23,11 +23,11 @@ public class Fruitautomaat {
     }
 
     public void koopAppel() {
-        if (this.aantalAppels > 0) this.aantalAppels--;
+        if(this.aantalAppels > 0) this.aantalAppels--;
     }
 
     public void koopperen() {
-        if (this.aantalPeren > 0) this.aantalPeren--;
+        if(this.aantalPeren > 0) this.aantalPeren--;
     }
 
     public boolean uitverkochtAppels() {

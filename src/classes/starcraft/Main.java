@@ -1,4 +1,4 @@
-package com.starcraft;
+package classes.starcraft;
 
 public class Main {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package com.classes;
+package classes.classes;
 
 public class FxRechthoek {
     private double hoogte;

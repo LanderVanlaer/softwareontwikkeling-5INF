@@ -1,4 +1,4 @@
-package com.hogerlager;
+package classes.hogerlager;
 
 import java.util.ArrayList;
 

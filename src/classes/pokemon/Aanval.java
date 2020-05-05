@@ -1,4 +1,4 @@
-package com.pokemon;
+package classes.pokemon;
 
 public class Aanval {
     private String naam;
