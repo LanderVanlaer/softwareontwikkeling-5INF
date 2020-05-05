@@ -1,3 +1,5 @@
+package basic.trim1.strings;
+
 import java.util.Scanner;
 
 public class oef2_6_1 {
@@ -9,7 +11,7 @@ public class oef2_6_1 {
         System.out.print("Welk woord wilt u vervangen: ");
         veranderWoord = scan.nextLine();
         int indexWord = zin1.indexOf(veranderWoord);
-        if (indexWord == -1) {// Nakijken of het gegeven woord in de zin staat
+        if(indexWord == -1) {// Nakijken of het gegeven woord in de zin staat
             System.out.println("\"" + veranderWoord + "\"" + " staat niet in de zin.");
             return; // Return als het gegeven woord niet in de zin staat.
         }

@@ -1,3 +1,5 @@
+package basic.trim1.strings;
+
 public class oef2_5_2 {
     public static void main(String[] args) {
         String zin;

@@ -1,3 +1,4 @@
+package basic.trim1.startOef;
 
 public class oef12_2 {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package basic.trim1.strings;
+
 import java.util.Scanner;
 
 public class oef2_6_2 {

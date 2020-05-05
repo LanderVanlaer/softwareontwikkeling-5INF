@@ -1,0 +1,5 @@
+Beroep          2000    2012
+Medische        365     579
+Gezinshelper    580     859
+Programmeur     394     573
+Systeemanalyst  468     653

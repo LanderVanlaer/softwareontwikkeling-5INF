@@ -1,0 +1,4 @@
+Leerling		Gemiddelde
+Goovaerts		63.0
+Van Opstal		73.25
+Meeuws			51.0
