@@ -105,6 +105,6 @@ public class Array2D {
     }
 
     public void setValueOf(int x, int y, boolean b) {
-        this.grid[x][y] = b;
+        this.getGrid()[x][y] = b;
     }
 }
