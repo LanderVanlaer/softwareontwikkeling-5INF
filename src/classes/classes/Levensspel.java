@@ -3,7 +3,7 @@ package classes.classes;
 import java.util.Scanner;
 
 public class Levensspel {
-    private Array2D grid;
+    private final Array2D grid;
 
     public Levensspel(int n) {
         this.grid = new Array2D(n);
@@ -36,10 +36,7 @@ public class Levensspel {
                 int aantalWaardenRond = grid.getAantalWaardenRond(i, j);
                 boolean value = grid.getValueOf(i, j);
                 if(value) {
-                    if(aantalWaardenRond > 3 || aantalWaardenRond < 2)
-                        nieuwGrid.setValueOf(i, j, false);
-                    else
-                        nieuwGrid.setValueOf(i, j, true);
+                    nieuwGrid.setValueOf(i, j, aantalWaardenRond <= 3 && aantalWaardenRond >= 2);
                 } else {
                     if(aantalWaardenRond == 3)
                         nieuwGrid.setValueOf(i, j, true);
