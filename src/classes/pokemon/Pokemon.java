@@ -27,7 +27,7 @@ public class Pokemon {
         if(geslacht.equalsIgnoreCase("Man"))
             this.geslacht = true;
         else if(geslacht.equalsIgnoreCase("Vrouw"))
-            this.geslacht = true;
+            this.geslacht = false;
 
         this.levensbar = scan.nextInt();
         this.verdediging = scan.nextInt();
